@@ -1,0 +1,59 @@
+{
+  "stage": "A1",
+  "loss": "rmse",
+  "inputs": "sales_only",
+  "n_features": 1,
+  "model_config": {
+    "patch_len": 7,
+    "stride": 1,
+    "d_model": 128,
+    "n_heads": 8,
+    "n_layers": 3,
+    "d_ff": 256,
+    "dropout": 0.1,
+    "lookback": 28,
+    "horizon": 7,
+    "norm_type": "batch"
+  },
+  "train_config": {
+    "epochs": 50,
+    "lr": 0.001,
+    "patience": 10,
+    "batch_size": 128
+  },
+  "cv_results": [
+    {
+      "fold_id": 1,
+      "val_smape": 0.9697858815454821,
+      "val_rmse": 17.127893768617326,
+      "val_mae": 8.33549835162167,
+      "val_mse": 293.3647449490402,
+      "best_epoch": 32
+    },
+    {
+      "fold_id": 2,
+      "val_smape": 1.1770042258250666,
+      "val_rmse": 32.17841199892855,
+      "val_mae": 13.683952496922696,
+      "val_mse": 1035.4501987727892,
+      "best_epoch": 10
+    },
+    {
+      "fold_id": 3,
+      "val_smape": 0.9921633140467654,
+      "val_rmse": 23.39187633418809,
+      "val_mae": 8.362282226487393,
+      "val_mse": 547.1798784339488,
+      "best_epoch": 30
+    },
+    {
+      "fold_id": 4,
+      "val_smape": 0.9925792522478473,
+      "val_rmse": 28.32394808085421,
+      "val_mae": 11.30157617041131,
+      "val_mse": 802.2460348869248,
+      "best_epoch": 10
+    }
+  ],
+  "timestamp": "2025-08-24T02:30:50.162962"
+}

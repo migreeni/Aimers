@@ -1,0 +1,59 @@
+{
+  "stage": "A2",
+  "loss": "rmse",
+  "inputs": "all_features",
+  "n_features": 124,
+  "model_config": {
+    "patch_len": 7,
+    "stride": 1,
+    "d_model": 128,
+    "n_heads": 8,
+    "n_layers": 3,
+    "d_ff": 256,
+    "dropout": 0.1,
+    "lookback": 28,
+    "horizon": 7,
+    "norm_type": "batch"
+  },
+  "train_config": {
+    "epochs": 50,
+    "lr": 0.001,
+    "patience": 10,
+    "batch_size": 128
+  },
+  "cv_results": [
+    {
+      "fold_id": 1,
+      "val_smape": 1.1458001827420243,
+      "val_rmse": 17.945049301817377,
+      "val_mae": 10.852833030115313,
+      "val_mse": 322.0247944446564,
+      "best_epoch": 20
+    },
+    {
+      "fold_id": 2,
+      "val_smape": 1.1815071391255532,
+      "val_rmse": 33.054468978095876,
+      "val_mae": 13.75205433039997,
+      "val_mse": 1092.5979194239026,
+      "best_epoch": 10
+    },
+    {
+      "fold_id": 3,
+      "val_smape": 1.0836280287263322,
+      "val_rmse": 27.444566763061346,
+      "val_mae": 14.22903664742109,
+      "val_mse": 753.2042448121315,
+      "best_epoch": 11
+    },
+    {
+      "fold_id": 4,
+      "val_smape": 1.0587763228220868,
+      "val_rmse": 28.953150959990577,
+      "val_mae": 9.996263124676025,
+      "val_mse": 838.2849505120033,
+      "best_epoch": 10
+    }
+  ],
+  "timestamp": "2025-08-24T02:30:50.163301"
+}
